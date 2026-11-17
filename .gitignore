@@ -95,3 +95,7 @@ __pycache__/
 !/notebooks/qwen3_h286_completion_128_runtime.py
 !/notebooks/h286_completion_128.ipynb
 !/notebooks/h286_completion_128_START.ipynb
+!/notebooks/build_h286_group_restore.py
+!/notebooks/qwen3_h286_group_runtime.py
+!/notebooks/h286_group_restore.ipynb
+!/notebooks/h286_group_restore_START.ipynb

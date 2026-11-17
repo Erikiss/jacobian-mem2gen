@@ -22,6 +22,15 @@ Completed output, strict answer format and a subsequent semantic review are
 reported separately. This selected follow-up addresses truncated answers; it
 does not add an independent test set.
 
+The next [local group-restoration protocol](attention_probe/GROUP_RESTORATION.md)
+tests the fixed H286 subsets in blocks 7 and 14. The small
+[group-restoration starter](notebooks/h286_group_restore_START.ipynb) loads the
+separately supplied `h286_group_restore_paket.zip`. It runs 350 prompt-prefill
+measurements and 46 bounded responses over ten diagnostic inputs, with donor
+identity checks, restoration in both directions and fixed random controls.
+These are local intervention tests on two known task families, not a discovery
+of neuron communities. Restoring baseline activations may restore a wrong answer.
+
 Two experiment tracks continue independently:
 
 | Track | Data and model | Comparison |
