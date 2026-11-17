@@ -14,6 +14,35 @@ the separately provided `h286_a100_paket.zip`. The existing diagnostic uses
 private reference data and result archives are not included in this public repo.
 The larger notebooks are public source templates, not the private run packages.
 
+The separate [128-token completion starter](notebooks/h286_completion_128_START.ipynb)
+uses `h286_completion_128_paket.zip` to repeat four selected original inputs with
+the same five arms, fresh caches and a higher total token cap. It compares each
+old token prefix and earlier EOS against a privately supplied, hashed baseline.
+Completed output, strict answer format and a subsequent semantic review are
+reported separately. This selected follow-up addresses truncated answers; it
+does not add an independent test set.
+
+The next [local group-restoration protocol](attention_probe/GROUP_RESTORATION.md)
+tests the fixed H286 subsets in blocks 7 and 14. The small
+[group-restoration starter](notebooks/h286_group_restore_START.ipynb) loads the
+separately supplied `h286_group_restore_paket.zip`. It runs 350 prompt-prefill
+measurements and 46 bounded responses over ten diagnostic inputs, with donor
+identity checks, restoration in both directions and fixed random controls.
+These are local intervention tests on two known task families, not a discovery
+of neuron communities. Restoring baseline activations may restore a wrong answer.
+
+Two experiment tracks continue independently:
+
+| Track | Data and model | Comparison |
+| --- | --- | --- |
+| H286, in this repository | Original Qwen3-1.7B, fixed 286 coordinates and original reference statistics | Retain previous measurements and compare new runs against their recorded prompts, tokens and states. |
+| [Goodfire Atlas interface](https://github.com/Erikiss/Interface-Neuron-Atlas-by-GoodFire-AI) | Published Qwen3.6-35B-A3B annotations and a separately frozen selection of seven target and seven control neurons | Use descriptions and examples to specify hypotheses; check effects in a separate candidate-model experiment. |
+
+The Atlas labels do not map the 286 coordinates onto the larger model. Exact
+Atlas-to-checkpoint and measurement-site identity remain unverified. Reading
+Atlas data requires no GPU; running its candidate model needs a separate memory
+budget (approximately 67 GiB of BF16 weights, plus runtime memory).
+
 Implementation: `attention_probe/` and `notebooks/`; focused tests: `tests/test_*.py`.
 The original Mem2Gen training, patching and evaluation code is preserved below.
 

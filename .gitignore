@@ -89,3 +89,13 @@ __pycache__/
 !/notebooks/qwen3_h286_validation_runtime.py
 !/notebooks/h286_A100_START.ipynb
 !/tests/test_*.py
+
+# Separate four-input 128-token completion follow-up.
+!/notebooks/build_h286_completion_128.py
+!/notebooks/qwen3_h286_completion_128_runtime.py
+!/notebooks/h286_completion_128.ipynb
+!/notebooks/h286_completion_128_START.ipynb
+!/notebooks/build_h286_group_restore.py
+!/notebooks/qwen3_h286_group_runtime.py
+!/notebooks/h286_group_restore.ipynb
+!/notebooks/h286_group_restore_START.ipynb
