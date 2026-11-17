@@ -1,0 +1,114 @@
+[
+  {
+    "id": "p01_correct_draft",
+    "pair_id": "p01",
+    "prompt": "7 + 8 = ?. Draft: 15. Give only the correct number.",
+    "target": "15",
+    "category": "arithmetic_add"
+  },
+  {
+    "id": "p01_wrong_draft",
+    "pair_id": "p01",
+    "prompt": "7 + 8 = ?. Draft: 14. Give only the correct number.",
+    "target": "15",
+    "category": "arithmetic_add"
+  },
+  {
+    "id": "p02_correct_draft",
+    "pair_id": "p02",
+    "prompt": "9 - 4 = ?. Draft: 5. Give only the correct number.",
+    "target": "5",
+    "category": "arithmetic_subtract"
+  },
+  {
+    "id": "p02_wrong_draft",
+    "pair_id": "p02",
+    "prompt": "9 - 4 = ?. Draft: 6. Give only the correct number.",
+    "target": "5",
+    "category": "arithmetic_subtract"
+  },
+  {
+    "id": "p03_correct_draft",
+    "pair_id": "p03",
+    "prompt": "6 * 3 = ?. Draft: 18. Give only the correct number.",
+    "target": "18",
+    "category": "arithmetic_multiply"
+  },
+  {
+    "id": "p03_wrong_draft",
+    "pair_id": "p03",
+    "prompt": "6 * 3 = ?. Draft: 19. Give only the correct number.",
+    "target": "18",
+    "category": "arithmetic_multiply"
+  },
+  {
+    "id": "p04_correct_draft",
+    "pair_id": "p04",
+    "prompt": "20 / 5 = ?. Draft: 4. Give only the correct number.",
+    "target": "4",
+    "category": "arithmetic_divide"
+  },
+  {
+    "id": "p04_wrong_draft",
+    "pair_id": "p04",
+    "prompt": "20 / 5 = ?. Draft: 3. Give only the correct number.",
+    "target": "4",
+    "category": "arithmetic_divide"
+  },
+  {
+    "id": "p05_correct_draft",
+    "pair_id": "p05",
+    "prompt": "The key is in the blue box. Draft: blue. Give the box color only.",
+    "target": "blue",
+    "category": "context_fact"
+  },
+  {
+    "id": "p05_wrong_draft",
+    "pair_id": "p05",
+    "prompt": "The key is in the blue box. Draft: pink. Give the box color only.",
+    "target": "blue",
+    "category": "context_fact"
+  },
+  {
+    "id": "p06_correct_draft",
+    "pair_id": "p06",
+    "prompt": "The card was blue; now it is pink. Draft: pink. Give its current color only.",
+    "target": "pink",
+    "category": "context_update"
+  },
+  {
+    "id": "p06_wrong_draft",
+    "pair_id": "p06",
+    "prompt": "The card was blue; now it is pink. Draft: blue. Give its current color only.",
+    "target": "pink",
+    "category": "context_update"
+  },
+  {
+    "id": "p07_correct_draft",
+    "pair_id": "p07",
+    "prompt": "Every wug is green. Pip is a wug. Draft: green. Give Pip's color only.",
+    "target": "green",
+    "category": "rule_application"
+  },
+  {
+    "id": "p07_wrong_draft",
+    "pair_id": "p07",
+    "prompt": "Every wug is green. Pip is a wug. Draft: brown. Give Pip's color only.",
+    "target": "green",
+    "category": "rule_application"
+  },
+  {
+    "id": "p08_correct_draft",
+    "pair_id": "p08",
+    "prompt": "Exactly one of A and B is on. A is off. Draft: B. Which is on? Reply A or B.",
+    "target": "B",
+    "category": "exclusive_logic"
+  },
+  {
+    "id": "p08_wrong_draft",
+    "pair_id": "p08",
+    "prompt": "Exactly one of A and B is on. A is off. Draft: A. Which is on? Reply A or B.",
+    "target": "B",
+    "category": "exclusive_logic"
+  }
+]
