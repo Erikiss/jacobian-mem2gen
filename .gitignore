@@ -74,3 +74,18 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 .DS_Store
+
+# Isolated fixed-H286 attention experiments and their public Colab templates.
+!/attention_probe/
+!/notebooks/
+/notebooks/*
+!/notebooks/build_h286_a100_validation.py
+!/notebooks/build_h286_l4_pilot.py
+!/notebooks/build_h286_small_launcher.py
+!/notebooks/build_h286_validation_launcher.py
+!/notebooks/h286_a100_validation.ipynb
+!/notebooks/h286_l4_pilot.ipynb
+!/notebooks/qwen3_h286_runtime.py
+!/notebooks/qwen3_h286_validation_runtime.py
+!/notebooks/h286_A100_START.ipynb
+!/tests/test_*.py

@@ -1,5 +1,24 @@
 # Mem2Gen: Why Memorized Knowledge Fails to Generalize in LLM Fine-tuning
 
+## H286 attention experiments in this fork
+
+The separate [H286 protocol](attention_probe/A100_VALIDATION.md) tests local
+attention interventions on the original Qwen3-1.7B checkpoint with a fixed set
+of 286 measured coordinates. It retains the original teacher-forcing diagnostic
+and adds prompt-only greedy responses. These exploratory tests do not establish
+a general bottleneck, energy savings, or self-monitoring.
+
+For Colab, open the small [A100 starter](notebooks/h286_A100_START.ipynb) and supply
+the separately provided `h286_a100_paket.zip`. The existing diagnostic uses
+16 inputs, five variants and at most 48 generated tokens per response. Original
+private reference data and result archives are not included in this public repo.
+The larger notebooks are public source templates, not the private run packages.
+
+Implementation: `attention_probe/` and `notebooks/`; focused tests: `tests/test_*.py`.
+The original Mem2Gen training, patching and evaluation code is preserved below.
+
+---
+
 Code and data for the paper **"Towards Mechanistically Understanding Why Memorized Knowledge Fails to Generalize in Large Language Model Finetuning"**.
 
 <p align="center">
