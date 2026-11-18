@@ -109,3 +109,9 @@ __pycache__/
 !/notebooks/qwen3_b14_b18_runtime.py
 !/notebooks/b14_b18_local_transport.ipynb
 !/notebooks/b14_b18_START.ipynb
+
+# Separate convergence and damping follow-up; original pilot stays frozen.
+!/notebooks/build_b14_b18_refine.py
+!/notebooks/qwen3_b14_b18_refine_runtime.py
+!/notebooks/b14_b18_refinement.ipynb
+!/notebooks/b14_b18_refine_START.ipynb

@@ -2,7 +2,17 @@
 
 ## H286 attention experiments in this fork
 
-The current [B14 → B18 local transport pilot](attention_probe/B14_B18_LOCAL_TRANSPORT.md)
+The current [B14 → B18 refinement](attention_probe/B14_B18_REFINEMENT.md)
+separates solver convergence from the choice of damping on the same four original
+transport cases. It first repeats the original damping with a larger, verified
+iteration budget, then tests two prespecified lower damping levels. Eight fixed
+random directions and a copied direction are matched to each transported source
+norm. Its [small A100 starter](notebooks/b14_b18_refine_START.ipynb) loads the
+separately supplied private `b14_b18_refine_paket.zip`. The twelve stages run
+automatically, with checkpoints and explicit convergence and budget status.
+This numerical follow-up does not generate new answers or establish observer memory.
+
+The preceding [B14 → B18 local transport pilot](attention_probe/B14_B18_LOCAL_TRANSPORT.md)
 connects the original hidden-state findings to native Jacobian measurements and
 regularized residual transport. It uses 16 source-bound knowledge/arithmetic
 inputs, neighboring attention-intervention blocks, matched continuations and
