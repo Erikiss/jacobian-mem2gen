@@ -115,3 +115,9 @@ __pycache__/
 !/notebooks/qwen3_b14_b18_refine_runtime.py
 !/notebooks/b14_b18_refinement.ipynb
 !/notebooks/b14_b18_refine_START.ipynb
+
+# Frozen-calibration temporal persistence and functional follow-up.
+!/notebooks/build_temporal_functional.py
+!/notebooks/qwen3_temporal_functional_runtime.py
+!/notebooks/temporal_functional.ipynb
+!/notebooks/temporal_functional_START.ipynb

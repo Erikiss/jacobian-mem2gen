@@ -2,7 +2,19 @@
 
 ## H286 attention experiments in this fork
 
-The current [B14 → B18 refinement](attention_probe/B14_B18_REFINEMENT.md)
+The current [temporal and functional stage](attention_probe/TEMPORAL_FUNCTIONAL.md)
+tracks a single block-14 pulse across the same forced 32-token continuation.
+Eight calibration inputs define one shared direction before eight separate test
+inputs receive fixed block-18 interventions, norm-matched random directions and
+selective cache restorations. Complete gold-versus-foil likelihoods and bounded
+free responses are reported separately. Its
+[small A100 starter](notebooks/temporal_functional_START.ipynb) accepts the private
+`temporal_functional_paket.zip`, runs with checkpoints and exports
+`temporal_functional_results.zip`. The 20-minute post-load soft budget is not a
+runtime guarantee. These reused exploratory tasks test temporal propagation and
+functional effects; they do not establish observer recognition or learned memory.
+
+The preceding [B14 → B18 refinement](attention_probe/B14_B18_REFINEMENT.md)
 separates solver convergence from the choice of damping on the same four original
 transport cases. It first repeats the original damping with a larger, verified
 iteration budget, then tests two prespecified lower damping levels. Eight fixed
