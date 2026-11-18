@@ -2,6 +2,15 @@
 
 ## H286 attention experiments in this fork
 
+The current [B14 → B18 local transport pilot](attention_probe/B14_B18_LOCAL_TRANSPORT.md)
+connects the original hidden-state findings to native Jacobian measurements and
+regularized residual transport. It uses 16 source-bound knowledge/arithmetic
+inputs, neighboring attention-intervention blocks, matched continuations and
+separate free responses. Its [small A100 starter](notebooks/b14_b18_START.ipynb)
+accepts the separately supplied private `b14_b18_paket.zip`. This is a local,
+context-dependent extension of the transport idea; it is not a fitted global
+J-lens or evidence of a memorized observer effect by itself.
+
 The separate [H286 protocol](attention_probe/A100_VALIDATION.md) tests local
 attention interventions on the original Qwen3-1.7B checkpoint with a fixed set
 of 286 measured coordinates. It retains the original teacher-forcing diagnostic
