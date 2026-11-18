@@ -99,3 +99,7 @@ __pycache__/
 !/notebooks/qwen3_h286_group_runtime.py
 !/notebooks/h286_group_restore.ipynb
 !/notebooks/h286_group_restore_START.ipynb
+!/notebooks/build_h286_control_answers.py
+!/notebooks/qwen3_h286_control_answers_runtime.py
+!/notebooks/h286_control_answers.ipynb
+!/notebooks/h286_control_answers_START.ipynb

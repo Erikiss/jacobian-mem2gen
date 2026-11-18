@@ -31,6 +31,16 @@ identity checks, restoration in both directions and fixed random controls.
 These are local intervention tests on two known task families, not a discovery
 of neuron communities. Restoring baseline activations may restore a wrong answer.
 
+The [control-answer follow-up](attention_probe/CONTROL_ANSWERS.md) fills the
+missing free responses for all six fixed G7 transfer controls on the original
+Pip prompt. Its [small Colab starter](notebooks/h286_control_answers_START.ipynb)
+loads the separate `h286_control_answers_paket.zip` and runs exactly nine bounded
+responses: Sham, the block-7 pulse, the target transfer, and all six controls.
+It preserves the earlier sources and inputs, checks the old first-token decisions
+and three known response trajectories, and stores all nine full-vocabulary
+prefill endpoints. This remains a follow-up on a known case; outside-group masks
+and within-group directions test different forms of specificity.
+
 Two experiment tracks continue independently:
 
 | Track | Data and model | Comparison |
