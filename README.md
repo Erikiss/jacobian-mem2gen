@@ -2,6 +2,15 @@
 
 ## H286 attention experiments in this fork
 
+The current [B14 → B18 local transport pilot](attention_probe/B14_B18_LOCAL_TRANSPORT.md)
+connects the original hidden-state findings to native Jacobian measurements and
+regularized residual transport. It uses 16 source-bound knowledge/arithmetic
+inputs, neighboring attention-intervention blocks, matched continuations and
+separate free responses. Its [small A100 starter](notebooks/b14_b18_START.ipynb)
+accepts the separately supplied private `b14_b18_paket.zip`. This is a local,
+context-dependent extension of the transport idea; it is not a fitted global
+J-lens or evidence of a memorized observer effect by itself.
+
 The separate [H286 protocol](attention_probe/A100_VALIDATION.md) tests local
 attention interventions on the original Qwen3-1.7B checkpoint with a fixed set
 of 286 measured coordinates. It retains the original teacher-forcing diagnostic
@@ -13,6 +22,45 @@ the separately provided `h286_a100_paket.zip`. The existing diagnostic uses
 16 inputs, five variants and at most 48 generated tokens per response. Original
 private reference data and result archives are not included in this public repo.
 The larger notebooks are public source templates, not the private run packages.
+
+The separate [128-token completion starter](notebooks/h286_completion_128_START.ipynb)
+uses `h286_completion_128_paket.zip` to repeat four selected original inputs with
+the same five arms, fresh caches and a higher total token cap. It compares each
+old token prefix and earlier EOS against a privately supplied, hashed baseline.
+Completed output, strict answer format and a subsequent semantic review are
+reported separately. This selected follow-up addresses truncated answers; it
+does not add an independent test set.
+
+The next [local group-restoration protocol](attention_probe/GROUP_RESTORATION.md)
+tests the fixed H286 subsets in blocks 7 and 14. The small
+[group-restoration starter](notebooks/h286_group_restore_START.ipynb) loads the
+separately supplied `h286_group_restore_paket.zip`. It runs 350 prompt-prefill
+measurements and 46 bounded responses over ten diagnostic inputs, with donor
+identity checks, restoration in both directions and fixed random controls.
+These are local intervention tests on two known task families, not a discovery
+of neuron communities. Restoring baseline activations may restore a wrong answer.
+
+The [control-answer follow-up](attention_probe/CONTROL_ANSWERS.md) fills the
+missing free responses for all six fixed G7 transfer controls on the original
+Pip prompt. Its [small Colab starter](notebooks/h286_control_answers_START.ipynb)
+loads the separate `h286_control_answers_paket.zip` and runs exactly nine bounded
+responses: Sham, the block-7 pulse, the target transfer, and all six controls.
+It preserves the earlier sources and inputs, checks the old first-token decisions
+and three known response trajectories, and stores all nine full-vocabulary
+prefill endpoints. This remains a follow-up on a known case; outside-group masks
+and within-group directions test different forms of specificity.
+
+Two experiment tracks continue independently:
+
+| Track | Data and model | Comparison |
+| --- | --- | --- |
+| H286, in this repository | Original Qwen3-1.7B, fixed 286 coordinates and original reference statistics | Retain previous measurements and compare new runs against their recorded prompts, tokens and states. |
+| [Goodfire Atlas interface](https://github.com/Erikiss/Interface-Neuron-Atlas-by-GoodFire-AI) | Published Qwen3.6-35B-A3B annotations and a separately frozen selection of seven target and seven control neurons | Use descriptions and examples to specify hypotheses; check effects in a separate candidate-model experiment. |
+
+The Atlas labels do not map the 286 coordinates onto the larger model. Exact
+Atlas-to-checkpoint and measurement-site identity remain unverified. Reading
+Atlas data requires no GPU; running its candidate model needs a separate memory
+budget (approximately 67 GiB of BF16 weights, plus runtime memory).
 
 Implementation: `attention_probe/` and `notebooks/`; focused tests: `tests/test_*.py`.
 The original Mem2Gen training, patching and evaluation code is preserved below.
